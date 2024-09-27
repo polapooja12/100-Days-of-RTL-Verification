@@ -1,3 +1,4 @@
+`include "decoder_3X8.v"
 module decoder_test_3x8(a,b,c,y);
   output reg a,b,c;
   input wire [7:0]y;
