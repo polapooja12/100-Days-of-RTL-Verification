@@ -1,17 +1,14 @@
-module tff(
-    input t,clk,reset,
+module dff(
+    input clk, reset, d,
     output reg Q
     );
+    
     always@(posedge clk)
           begin
-            if(reset)
-               Q <= 1'b0;
-            else
-                begin
-                   if(t)
-                    Q<= ~Q;
-                   else
-                    Q<= Q;                     
-                end
-          end
+            if({reset})
+            Q<= 1'b0;
+            else 
+            Q <= d;
+            end
+
 endmodule
