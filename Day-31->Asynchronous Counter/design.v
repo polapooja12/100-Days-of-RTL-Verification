@@ -6,7 +6,7 @@ module d_ff(clk,d,q,qbar);
   end
   assign qbar=~q;
 endmodule
-module d_synchronous_counter(clk,q,qbar);
+module d_asynchronous_counter(clk,q,qbar);
   input clk;
   output reg[3:0] q,qbar;
   d_ff d1(clk,qbar[0],q[0],qbar[0]);
