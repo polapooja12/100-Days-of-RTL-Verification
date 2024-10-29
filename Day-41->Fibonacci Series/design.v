@@ -1,4 +1,4 @@
-module fib(input wire[31:0]n, output reg[31:0]result);
+module fibonacci_series(input wire[31:0]n, output reg[31:0]result);
   function automatic [31:0] fib;
     inpu[31:0] x;
     begin
