@@ -1,7 +1,8 @@
 `include "design.v"
 module testbench(clk, rst, start, filled, doorclose, doorlock, detergent, cycletime_out, drained, spintime_out, fillvalve_on, soap_w ash, motor_on, drainvalve_on, water_wash, done);
-output reg clk, rst, doorclose, start, filled, detergent, cycletime_out, drained, spintime_out; input wire doorlock, motor_on, fillvalve on, drainvalve on, soap wash, water wash, done;
-washingmachine dut (clk, rst, start, filled, doorclose, doorlock, detergent, cycletime_out, drained, spintime_out, fillvalve_on, soap wash, wash.motor motor on, drainvalve on, water wash, done);
+output reg clk, rst, doorclose, start, filled, detergent, cycletime_out, drained, spintime_out; 
+input wire doorlock, motor_on, fillvalve on, drainvalve_on, soapwash, water_wash, done;
+  washingmachine inst(clk, rst, start, filled, doorclose, doorlock, detergent, cycletime_out, drained, spintime_out, fillvalve_on, soap_wash, washmotor motor on, drainvalve on, water wash, done);
   always #5 clk=-clk;
   initial begin
     $monitor("Time=%od clk=%0b rst=%0b start=%0b doorclose=%0b,filled=%Ob detergent=%0b cycletime_out=%0b spintime_out=%0b doorlock=%ob fillvalve_on=%0b drainvalve_on=%eb soap wash=%ob water washob done=%0b", $time, clk, rst, start, doorclose, fi lled, detergent, cycletime_out, spintime out, doorlock, fillvalve on, drainvalve on, soap wash, water wash, done);
