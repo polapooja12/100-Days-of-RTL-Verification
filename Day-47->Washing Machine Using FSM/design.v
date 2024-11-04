@@ -30,7 +30,7 @@ parameter spin=3'b101;
           water_wash=0;
           fillvalve_on=0;
           drainvalve_on=0;
-          done;
+          done=0;
         end
       fill_water:if (filled==1)
         begin
