@@ -32,7 +32,7 @@ parameter spin=3'b101;
           drainvalve_on=0;
           done;
         end
-      fill water:if (filled==1)
+      fill_water:if (filled==1)
         begin
           if(soap_wash==0)
             begin
