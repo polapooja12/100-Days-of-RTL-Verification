@@ -1,7 +1,7 @@
 `include "design.v"
-module testbench(clk, rst, start, filled, doorclose, doorlock, detergent, cycletime_out, drained, spintime_out, fillvalve_on, soap_w ash, motor_on, drainvalve_on, water_wash, done);
+module testbench(clk, rst, start, filled, doorclose, doorlock, detergent, cycletime_out, drained, spintime_out, fillvalve_on, soap_wash, motor_on, drainvalve_on, water_wash, done);
 output reg clk, rst, doorclose, start, filled, detergent, cycletime_out, drained, spintime_out; 
-input wire doorlock, motor_on, fillvalve on, drainvalve_on, soapwash, water_wash, done;
+input wire doorlock, motor_on, fillvalve_on, drainvalve_on, soap_wash, water_wash, done;
   washingmachine inst(clk, rst, start, filled, doorclose, doorlock, detergent, cycletime_out, drained, spintime_out, fillvalve_on, soap_wash, motor_on, drainvalve_on, water_wash, done);
   always #5 clk=~clk;
   initial begin
