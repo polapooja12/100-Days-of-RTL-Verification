@@ -13,7 +13,7 @@ parameter spin=3'b101;
     case(cs)
       check_door: if(start==1 && doorclose==1)
         begin
-        ns=fill water;
+        ns=fill_water;
           doorlock=1;
           motor_on=0;
           soap_wash=0;
