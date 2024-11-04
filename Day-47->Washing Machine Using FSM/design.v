@@ -43,7 +43,7 @@ parameter spin=3'b101;
               water_wash=0;
               fillvalve_on=0;
               drainvale_on=0;
-              dne=0;
+              done=0;
             end
             else begin
               ns=cycle;
@@ -62,7 +62,7 @@ parameter spin=3'b101;
         motor_on=0;
         soap_wash=0;
         water_wash=0;
-        fillvalce_on=1;
+        fillvalve_on=1;
         drainvalve_on=0;
         done=0;
       end
@@ -81,7 +81,7 @@ parameter spin=3'b101;
         ns=cs;
         doorlock=1;
         motor_on=0;
-        soap_wash=;
+        soap_wash=1;
         water_wash=0;
         fillvalve_on=0;
         drainvalve_on=0;
@@ -155,14 +155,14 @@ parameter spin=3'b101;
           soap_wash=1;
           water_wash=1;
           fillvalve_on=0;
-          dranvalve_on=1;
+          drainvalve_on=1;
           done=0;
         end
       default:
         ns=check_door;
     endcase
     end
-  always @(posedge clk or negedge rst)\
+  always @(posedge clk or negedge rst)
     begin
       if(rst)
         begin
