@@ -1,5 +1,5 @@
 module washingmachine(clk,rst, start, filled, doorclose, doorlock, detergent, cycletime_out, drained, spintime_out, fillvalve_on, soap_wash, motor_on, drainvalve_on, water_wash,done);
-input wire clk, rst, doorclose, start, filled, detergent, cycletime_out, drained, spintime out; 
+input wire clk, rst, doorclose, start, filled, detergent, cycletime_out, drained, spintime_out; 
 output reg doorlock, motor_on, fillvalve_on, drainvalve_on, soap_wash,water_wash, done;
 parameter check_door=3'b000;
 parameter fill_water=3'b001;
