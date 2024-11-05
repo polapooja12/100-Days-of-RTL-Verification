@@ -23,7 +23,7 @@ module traffic_light_controller(clk,rst,r,g);
       3'b000:begin
         r<=4'b000;
         g<=4'b000;
-        n-state<=3'b001;
+        n_state<=3'b001;
       end
       3'b001:begin
         g<=4'b0001;
