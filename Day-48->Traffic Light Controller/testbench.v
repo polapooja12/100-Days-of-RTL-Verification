@@ -3,7 +3,7 @@ module traffic_light_controller_test();
   reg clk,rst;
   wire [3:0] r,g;
   traffic_light_controller inst(clk,rst,r,g);
-  always #5 lk=~clk;
+  always #5 clk=~clk;
   initial begin
     clk<=0;
     rst<=1;
