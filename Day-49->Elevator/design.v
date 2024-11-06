@@ -1,4 +1,4 @@
-module bcd27seg(input wire [6:0] sseg, output reg[3:0]bcd);
+module bcd27seg(input wire [6:0] seg, output reg[3:0]bcd);
   always @(*) begin
     case(seg)
       7'b1000000:bcd=4'b0000;
@@ -14,7 +14,7 @@ module bcd27seg(input wire [6:0] sseg, output reg[3:0]bcd);
     endcase
   end
 endmodule
-module elevator(clk,rst,reqG,reqF1,reqF2,reqF3,overload,firealarm,person_detected,door_open,door_closed,bcd_floor,seq,prox);
+module elevator(clk,rst,reqG,reqF1,reqF2,reqF3,overload,firealarm,person_detected,door_open,door_closed,bcd_floor,seg,prox);
   input wire clk,rst;
   input wire reqG,reqF1,reqF2,reqF3;
   input wire overload,firealarm;
