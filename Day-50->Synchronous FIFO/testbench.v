@@ -14,14 +14,14 @@ module testbench_tb();
     rst=1;
     wr_en=0;
     rd_en=0;
-    wr_data=8h00;
+    wr_data=8'h00;
     #10 rst=0;
     $display("starting FIFO Test...");
     if(empty&&!full)
-      $disply("fifo is initially empty");
+      $display("fifo is initially empty");
     else
       $display("empty flag check failed");
-    $display("Writig fifo...");
+    $display("Writing fifo...");
     for(int i=0;i<=16;i=i+1)
       begin
         wr_data=i;
@@ -33,7 +33,7 @@ module testbench_tb();
       $display("fifo is full after 16 elements");
     else
       $display("fifo doesnot reac full as expected");
-    $display('reaad data");
+    $display('read data");
              for(int i=1;i<=16;i=i+1) begin
                rd_en=1;
                #10;
