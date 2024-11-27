@@ -1,4 +1,3 @@
-
 `include "logicgates_tran.sv"
 `include "logicgates_gen.sv"
 `include "logicgates_drv.sv"
