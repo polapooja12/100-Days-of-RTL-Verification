@@ -2,7 +2,7 @@ class subclass;
   string loc;
   function subclass copy();
     copy=new();
-    copyloc=this.loc;
+    copy.loc=this.loc;
   endfunction
 endclass
 class packet;
