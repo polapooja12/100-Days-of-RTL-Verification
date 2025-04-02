@@ -1,4 +1,4 @@
-`include clock_divider.v"
+`include "clock_divider.v"
 module clock_divider_test;
   reg clk,reset;
   wire f4;
